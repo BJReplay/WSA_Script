@@ -283,9 +283,12 @@ jobs:
           import requests
           import zipfile
           import os
+          import socket
           import urllib.request
           import json
           import re
+
+          socket.setdefaulttimeout(900)
 
           arch = "${{ matrix.arch }}"
           # TODO: if it's an Android 12.1 base WSA keep it pico since other variants of opengapps are unable to boot successfully
